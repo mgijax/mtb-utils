@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir=".." name="jSql-IDE">
+    <!-- TODO: edit the following target according to your needs -->
+    <!-- (more info: http://www.netbeans.org/kb/41/freeform-config.html#runsingle) -->
+    <target name="run-selected-file-in-src">
+        <fail unless="run.class">Must set property 'run.class'</fail>
+        <java classname="${run.class}" failonerror="true" fork="true">
+            <classpath>
+                <pathelement path="lib/JavaToHtml.jar:lib/jconn2.jar:lib/jdbc2_0-stdext.jar:lib/JSortTable.jar:lib/liquidlnf.jar:lib/looks-1.2.1.jar:lib/mysql-3.0.7.jar:lib/oalnf.jar:lib/ojdbc14.jar:lib/RDBMSConnectionPool.jar:lib/AbsoluteLayout.jar:lib/swing-layout-1.0.jar"/>
+            </classpath>
+        </java>
+    </target>
+</project>

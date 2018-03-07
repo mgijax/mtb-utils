@@ -1,0 +1,69 @@
+<head>
+<title>SQL2JAVA</title>
+<meta name="DESCRIPTION" content="SQL 2 JAVA is an Open source object-relational mapping tools for java. It generates all the needed java code from a database wihtout any user input">
+<meta name="KEYWORDS" content="java, mysql, oracle, mssql, postgresql, code, generation, jdbc, preparedstatement, iterator, easy, simple, transaction, optimization, dao, j2ee, pattern, database, sql">
+</head>
+<html>
+<body>
+<!-- sourceforge logo here -->
+<A href="http://sourceforge.net"><IMG src="http://sourceforge.net/sflogo.php?group_id=54687&amp;type=1" border="0" alt="SourceForge Logo"></A>
+
+<h2>Running the SQL2JAVA example</h2>
+
+<p>The SQL2JAVA example can be run in less than five minutes. It generates a
+DB layer API to access a sample hsql database schema, Javadoc, and more!
+<p>We assume Java and Ant have already been installed.
+<ol>
+<li>First, start the hsql database. From a console, type:<br>
+  <br>
+  'ant hsql.server' <br>
+  <br>
+  (NOTE: In Windows, type 'START ant hsql.server' to keep hsql running in the background and immediately
+    access a new command console.)<p>
+<li>Create the sample database:  'ant hsql.create'
+<li>Generate the Java API for accessing the sample database: 'ant generate'
+<li>Compile the <a href="src/java/sql2java/sample/database">generated source
+    code
+API</a>: 'ant compile'
+<li>Run the
+<a href="./src/java/sql2java/sample/SampleMain.java">SampleMain.java</a> program
+which 
+uses the sample source code API: 'ant run'
+<li>Type 'ant javadoc' to generate the <a href="build/javadoc/index.html">Javadoc:</a>
+<li>Try sql2java against your own schema. Take a look at <a href="sql2java.properties">sql2java.properties</a>; it is self documented.
+<li>To customize the generated code, edit sql2java velocity templates: <a href="xBeanTemplate.vm">xBeanTemplate.vm</a>, <a href="xManagerTemplate.vm">xManagerTemplate.vm</a>, <a href="ManagerTemplate.vm">ManagerTemplate.vm</a>,  <a href="xcomparatorTemplate.vm">xComparatorTemplate.vm</a>, <a href="xListenerTemplate.vm">xListenerTemplate.vm</a>
+<li>You can also add your own templates... 
+<li>Enjoy!
+</ol>
+
+<h2>Support</h2>
+<ul>
+<li><a href="http://sql2java.sourceforge.net/">sql2java main website</a>
+<li><a href="http://sf.net/projects/sql2java">sql2java on sourceforge</a>
+</ul>
+<hr>
+
+<p> This product uses Velocity: license is available here <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
+
+<p>NOTE: For the example, we ship hsqldb in a binary form, but you do not need
+  it to
+  use
+sql2java against another database. </p>
+
+<pre>
+Manditory Legal Stuff:
+
+This product includes Hypersonic SQL.
+
+
+ORIGINAL LICENSE (a.k.a. "hypersonic_lic.txt")
+For content, code, and products originally developed by Thomas Mueller and the Hypersonic SQL Group:
+
+Copyright (c) 1995-2000 by the Hypersonic SQL Group. All rights reserved. 
+</pre>
+
+
+
+
+</body>
+</html>

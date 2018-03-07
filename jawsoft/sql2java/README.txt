@@ -1,0 +1,162 @@
+          ----------------------------------
+           SQL2JAVA 2.6.0 - README
+           http://sql2java.sourceforge.net/
+          ----------------------------------
+
+LEGAL:
+
+   * This product uses Velocity: license is available here http://www.apache.org/licenses/LICENSE-2.0 
+   * For the example, we ship hsqldb in a binary form, but you do not need
+     it to use sql2java against another database. 
+     "This product includes Hypersonic SQL.
+     ORIGINAL LICENSE (a.k.a. "hypersonic_lic.txt") 
+     For content, code, and products originally developed by Thomas Mueller and the Hypersonic SQL Group:
+     Copyright (c) 1995-2000 by the Hypersonic SQL Group. All rights reserved."
+
+
+SQL2JAVA is a FREE, SIMPLE, PRAGMATIC and POWERFUL code GENERATOR. 
+It maps any relational schema to a java API dedicated to access your 
+database schema. It supports Oracle, SQLServer, PostgreSQL, MySQL, 
+Sybase, HSQL, etc... 2 minutes to install/try...
+
+
+REQUIREMENT:
+
+    JDK 1.4.0 or later.
+
+SUMMARY:
+
+    SQL2JAVA enables Java developers to quickly map a
+    relational database schema to a set of classes.
+    These classes can be supplemented with your own methods
+    and used within any Java application. The generated source
+    code uses standard JDBC methods for persistence, and there
+    is no runtime library required.
+
+    SQL2JAVA supports virtually any database that can be accessed through a 
+    jdbc driver. This includes:
+
+    + Oracle 8i, 9
+    + SQL Server - MSSQL
+    + PostgreSQL
+    + MySQL 
+    + Sybase
+    + HSQL Database Engine
+    + Informix
+    + etc...
+    
+    Retrieval of auto-generated keys is also supported as long as your driver
+    supports it.
+
+    Adding support for new database is just a matter of 
+    editing sql2java.properties!
+
+CHANGES LOG:
+  ______________________________
+  * Release Name: sql2java-2.6.0
+ 
+  Changes:
+ - From now on code generation is done with Velocity (a huge thanks 
+   to Kelvin Nishikawa who sent us this incredible patch). 
+   The big plus is that you can modify these templates => and submit 
+   us patches :-)
+ - Optimistic lock support (thanks to Federico Crivellaro)
+ - Informix configuration added (thanks to masogato at sf.net )
+ 
+  ______________________________
+  * Release Name: sql2java-2.5.0
+ 
+  Changes:
+ - for consistency: deleteWhere method was renamed to deleteByWhere and now
+   the 'where' keyword must be specified in deleteByWhere methods.
+   For example, deleteWhere("name='john'") 
+   should be replaced by deleteByWhere("where name='john'")
+  (thanks to greg1104 for his feedbacks)
+ - deleteAll() method is now generated
+ - removed useless c.setAutoCommit(true)
+ - TODO tags and useless import were removed from generated code.
+   (thanks to greg1104 for his feedbacks)
+ - running the sample is now straightforward (we ship hsqldb for this purpose)
+ - no longer shipping mysql jdbc driver.
+ 
+ 
+  ______________________________
+  * Release Name: sql2java-2.4.1
+  Notes:
+ - no longer shipping oracle jdbc driver. File is too large, we assume
+ you have it.
+
+  Bug fixes:
+ - [ 954362 ] Generated code won't compile for types mapped to Boolean
+ (thanks to mattshaw who reported it)
+  
+  ______________________________
+  * Release Name: sql2java-2.4.0
+
+  Notes:
+ - we support any database as long as a JDBC driver is provided
+ - updated htdoc/config/sql2java.properties
+ - updated/improved javadoc
+ - updated build.xml to fix link at footer of javadoc
+ - updated working example documentation (doc/index.html)
+ - release of new sql2java website
+ - removed individual database writer classes
+ - new file: this readme !
+
+  Bug fixes:
+
+ - [ 923075 ] error when generating of synonyms
+ - We took into account the following feedback (thanks to ioly): 
+   "when calling loadByTemplate method or countUsingTemplate method, 
+    if the pObject is not initialized, no SQLException should be thrown, 
+    just return loadAll()" 
+ - We took into account the following feedback (thanks to ioly):
+   "currently I use sql server 2000 and the microsoft jdbc driver. 
+    I found when a table contains fields of "image" type , each column of 
+    ResultSet returned by driver "cannot be re-read"(it seems that you can 
+    call rs.getXXX only once), so I change the code from
+    pObject.setId(rs.getObject == null?(Integer)null:new Integer(rs.getInt(1))) to
+    pObject.setId((Integer)rs.getObject(1)), and when "select @@identity", the code 
+    should be: pObject.setId(new Integer(rs.getInt(1)))"
+    
+
+  ______________________________
+  * Release Name: sql2java-2-3-0
+
+  Notes:
+
+ - support for sql server (aka mssql)
+ - support for postgresql
+ - fix potential bugs with primitive type
+ - improved javadoc in setter method
+ - writers are now part of package com.netkernel.sql2java 
+   so for example we have
+   writer.class=com.netkernel.sql2java 
+   instead of writer.class=com.netkernel.generation.sqlcode.java.AutoGeneratedKeyWriter
+ - reorganized the cvs repository, source is in sql2java dir
+   instead of sql2code
+ - added support for all table types, including but not 
+   limited-to SYSTEM TABLE, VIEW, SYNONYM. This feature
+   is configurable through the doc/sql2java.properties.
+ - prevent failures when BLOB/CLOB are present.
+   BLOB/CLOB is NOT supported, but the code is generated
+   regardless.
+ - you can now configure the java type for mapping of
+   TIME, TIMESTAMP and DATE through
+   doc/sql2java.properties.
+
+ _____________________
+ * Release Name: 2.2.1
+
+ Notes:
+
+ New Features:
+ - support for auto generated key feature provided by certain jdbc driver
+
+ Changes:
+
+ - less classes generated
+ - null can be forced in one shot
+ - more javadoc
+
+===============================================================

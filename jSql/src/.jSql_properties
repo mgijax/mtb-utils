@@ -1,0 +1,13 @@
+#Wed Mar 10 11:38:27 EST 2004
+name_0=Sybase Example
+driver_0=com.sybase.jdbc2.jdbc.SybDriver
+url_0=jdbc\:sybase\:Tds\:127.0.0.1\:4100/DB
+userid_0=sybase
+password_0=sybase
+name_1=Oracle Example
+driver_1=oracle.jdbc.driver.OracleDriver
+url_1=jdbc\:oracle\:thin\:@127.0.0.1\:1521\:DB
+userid_1=scott
+password_1=tiger
+numberRecentQueries=5
+recentQuery_0=select sysdate from dual

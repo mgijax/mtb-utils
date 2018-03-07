@@ -1,0 +1,558 @@
+/*
+ *  JawDateChooser.java  - A bean for choosing a date
+ *  Copyright (C) 2004 Kai Toedter
+ *  kai@toedter.com
+ *  www.toedter.com
+ *
+ *  This program is free software; you can redistribute it and/or
+ *  modify it under the terms of the GNU Lesser General Public License
+ *  as published by the Free Software Foundation; either version 2
+ *  of the License, or (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Lesser General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Lesser General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
+package us.jawsoft.gui.jawdate;
+
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.net.URL;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
+import javax.swing.MenuElement;
+import javax.swing.MenuSelectionManager;
+import javax.swing.SwingUtilities;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+/**
+ * A date chooser containig a date editor and a button, that makes a JCalendar
+ * visible for choosing a date. If no date editor is specified, a
+ * JawTextFieldDateEditor is used as default.
+ * 
+ * 
+ * @author Kai Toedter
+ * @version $LastChangedRevision: 85 $
+ * @version $LastChangedDate: 2006-04-28 13:50:52 +0200 (Fr, 28 Apr 2006) $
+ */
+public class JawDateChooser extends JPanel implements ActionListener,
+		PropertyChangeListener {
+
+	private static final long serialVersionUID = -4306412745720670722L;
+
+	protected IDateEditor dateEditor;
+
+	protected JButton calendarButton;
+
+	protected JawCalendar jawcalendar;
+
+	protected JPopupMenu popup;
+
+	protected boolean isInitialized;
+
+	protected boolean dateSelected;
+
+	protected Date lastSelectedDate;
+
+	/**
+     * Creates a new JawDateChooser. By default, no date is set and the textfield
+     * is empty.
+     */
+	public JawDateChooser() {
+		this(null, null, null, null);
+	}
+
+	/**
+     * Creates a new JawDateChooser with given IDateEditor.
+     * 
+     * 
+     * @param dateEditor
+     *            the dateEditor to be used used to display the date. if null, a
+     *            JawTextFieldDateEditor is used.
+     */
+	public JawDateChooser(IDateEditor dateEditor) {
+		this(null, null, null, dateEditor);
+	}
+
+	/**
+     * Creates a new JawDateChooser.
+     * 
+     * 
+     * @param date
+     *            the date or null
+     */
+	public JawDateChooser(Date date) {
+		this(date, null);
+	}
+
+	/**
+     * Creates a new JawDateChooser.
+     * 
+     * 
+     * @param date
+     *            the date or null
+     * @param dateFormatString
+     *            the date format string or null (then MEDIUM SimpleDateFormat
+     *            format is used)
+     */
+	public JawDateChooser(Date date, String dateFormatString) {
+		this(date, dateFormatString, null);
+	}
+
+	/**
+     * Creates a new JawDateChooser.
+     * 
+     * 
+     * @param date
+     *            the date or null
+     * @param dateFormatString
+     *            the date format string or null (then MEDIUM SimpleDateFormat
+     *            format is used)
+     * @param dateEditor
+     *            the dateEditor to be used used to display the date. if null, a
+     *            JawTextFieldDateEditor is used.
+     */
+	public JawDateChooser(Date date, String dateFormatString,
+			IDateEditor dateEditor) {
+		this(null, date, dateFormatString, dateEditor);
+	}
+
+	/**
+     * Creates a new JawDateChooser. If the JawDateChooser is created with this
+     * constructor, the mask will be always visible in the date editor. Please
+     * note that the date pattern and the mask will not be changed if the locale
+     * of the JawDateChooser is changed.
+     * 
+     * 
+     * @param datePattern
+     *            the date pattern, e.g. "MM/dd/yy"
+     * @param maskPattern
+     *            the mask pattern, e.g. "##/##/##"
+     * @param placeholder
+     *            the placeholer charachter, e.g. '_'
+     */
+	public JawDateChooser(String datePattern, String maskPattern, char placeholder) {
+		this(null, null, datePattern, new JawTextFieldDateEditor(datePattern,
+				maskPattern, placeholder));
+	}
+
+	/**
+     * Creates a new JawDateChooser.
+     * 
+     * 
+     * @param jcal
+     *            the JCalendar to be used
+     * @param date
+     *            the date or null
+     * @param dateFormatString
+     *            the date format string or null (then MEDIUM Date format is
+     *            used)
+     * @param dateEditor
+     *            the dateEditor to be used used to display the date. if null, a
+     *            JawTextFieldDateEditor is used.
+     */
+	public JawDateChooser(JawCalendar jcal, Date date, String dateFormatString,
+			IDateEditor dateEditor) {
+		setName("JawDateChooser");
+
+		this.dateEditor = dateEditor;
+		if (this.dateEditor == null) {
+			this.dateEditor = new JawTextFieldDateEditor();
+		}
+
+		if (jcal == null) {
+			jawcalendar = new JawCalendar(date);
+		} else {
+			jawcalendar = jcal;
+			if (date != null) {
+				jawcalendar.setDate(date);
+			}
+		}
+
+		setLayout(new BorderLayout());
+
+		jawcalendar.getDayChooser().addPropertyChangeListener("day", this);
+		// always fire"day" property even if the user selects
+		// the already selected day again
+		jawcalendar.getDayChooser().setAlwaysFireDayProperty(true);
+
+		setDateFormatString(dateFormatString);
+		setDate(date);
+
+		// Display a calendar button with an icon
+		URL iconURL = getClass().getResource(
+				"/us/jawsoft/gui/jawdate/images/JDateChooserIcon.gif");
+		ImageIcon icon = new ImageIcon(iconURL);
+
+		calendarButton = new JButton(icon) {
+			private static final long serialVersionUID = -1913767779079949668L;
+
+			public boolean isFocusable() {
+				return false;
+			}
+		};
+		calendarButton.setMargin(new Insets(0, 0, 0, 0));
+		calendarButton.addActionListener(this);
+
+		// Alt + 'C' selects the calendar.
+		calendarButton.setMnemonic(KeyEvent.VK_C);
+
+		add(calendarButton, BorderLayout.EAST);
+		add(this.dateEditor.getUiComponent(), BorderLayout.CENTER);
+
+		calendarButton.setMargin(new Insets(0, 0, 0, 0));
+		// calendarButton.addFocusListener(this);
+
+		popup = new JPopupMenu() {
+			private static final long serialVersionUID = -6078272560337577761L;
+
+			public void setVisible(boolean b) {
+				Boolean isCanceled = (Boolean) getClientProperty("JPopupMenu.firePopupMenuCanceled");
+				if (b
+						|| (!b && dateSelected)
+						|| ((isCanceled != null) && !b && isCanceled
+								.booleanValue())) {
+					super.setVisible(b);
+				}
+			}
+		};
+
+		popup.setLightWeightPopupEnabled(true);
+
+		popup.add(jawcalendar);
+
+		lastSelectedDate = date;
+
+		// Corrects a problem that occured when the JMonthChooser's combobox is
+		// displayed, and a click outside the popup does not close it.
+
+		// The following code was provided by forum user podiatanapraia:
+		MenuSelectionManager.defaultManager().addChangeListener(
+				new ChangeListener() {
+					boolean hasListened = false;
+
+					public void stateChanged(ChangeEvent e) {
+						if (hasListened) {
+							hasListened = false;
+							return;
+						}
+						if (popup.isVisible()
+								&& JawDateChooser.this.jawcalendar.monthChooser
+										.getComboBox().hasFocus()) {
+							MenuElement[] me = MenuSelectionManager
+									.defaultManager().getSelectedPath();
+							MenuElement[] newMe = new MenuElement[me.length + 1];
+							newMe[0] = popup;
+							for (int i = 0; i < me.length; i++) {
+								newMe[i + 1] = me[i];
+							}
+							hasListened = true;
+							MenuSelectionManager.defaultManager()
+									.setSelectedPath(newMe);
+						}
+					}
+				});
+		// end of code provided by forum user podiatanapraia
+
+		isInitialized = true;
+	}
+
+	/**
+	 * Called when the jalendar button was pressed.
+	 * 
+	 * @param e
+	 *            the action event
+	 */
+	public void actionPerformed(ActionEvent e) {
+		int x = calendarButton.getWidth()
+				- (int) popup.getPreferredSize().getWidth();
+		int y = calendarButton.getY() + calendarButton.getHeight();
+
+		Calendar calendar = Calendar.getInstance();
+		Date date = dateEditor.getDate();
+		if (date != null) {
+			calendar.setTime(date);
+		}
+		jawcalendar.setCalendar(calendar);
+		popup.show(calendarButton, x, y);
+		dateSelected = false;
+	}
+
+	/**
+	 * Listens for a "date" property change or a "day" property change event
+	 * from the JCalendar. Updates the date editor and closes the popup.
+	 * 
+	 * @param evt
+	 *            the event
+	 */
+	public void propertyChange(PropertyChangeEvent evt) {
+		if (evt.getPropertyName().equals("day")) {
+			if (popup.isVisible()) {
+				dateSelected = true;
+				popup.setVisible(false);
+				setDate(jawcalendar.getCalendar().getTime());
+			}
+		} else if (evt.getPropertyName().equals("date")) {
+			setDate((Date) evt.getNewValue());
+		}
+	}
+
+	/**
+	 * Updates the UI of itself and the popup.
+	 */
+	public void updateUI() {
+		super.updateUI();
+		setEnabled(isEnabled());
+
+		if (jawcalendar != null) {
+			SwingUtilities.updateComponentTreeUI(popup);
+		}
+	}
+
+	/**
+	 * Sets the locale.
+	 * 
+	 * @param l
+	 *            The new locale value
+	 */
+	public void setLocale(Locale l) {
+		super.setLocale(l);
+		dateEditor.setLocale(l);
+		jawcalendar.setLocale(l);
+	}
+
+	/**
+	 * Gets the date format string.
+	 * 
+	 * @return Returns the dateFormatString.
+	 */
+	public String getDateFormatString() {
+		return dateEditor.getDateFormatString();
+	}
+
+	/**
+	 * Sets the date format string. E.g "MMMMM d, yyyy" will result in "July 21,
+	 * 2004" if this is the selected date and locale is English.
+	 * 
+	 * @param dfString
+	 *            The dateFormatString to set.
+	 */
+	public void setDateFormatString(String dfString) {
+		dateEditor.setDateFormatString(dfString);
+		invalidate();
+	}
+
+	/**
+     * Returns the date. If the JawDateChooser is started with a null date and no
+     * date was set by the user, null is returned.
+     * 
+     * 
+     * @return the current date
+     */
+	public Date getDate() {
+		return dateEditor.getDate();
+	}
+
+	/**
+	 * Sets the date. Fires the property change "date" if date != null.
+	 * 
+	 * @param date
+	 *            the new date.
+	 */
+	public void setDate(Date date) {
+		dateEditor.setDate(date);
+		if (getParent() != null) {
+			getParent().invalidate();
+		}
+	}
+
+	/**
+     * Returns the calendar. If the JawDateChooser is started with a null date (or
+     * null calendar) and no date was set by the user, null is returned.
+     * 
+     * 
+     * @return the current calendar
+     */
+	public Calendar getCalendar() {
+		Date date = getDate();
+		if (date == null) {
+			return null;
+		}
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		return calendar;
+	}
+
+	/**
+	 * Sets the calendar. Value null will set the null date on the date editor.
+	 * 
+	 * @param calendar
+	 *            the calendar.
+	 */
+	public void setCalendar(Calendar calendar) {
+		if (calendar == null) {
+			dateEditor.setDate(null);
+		} else {
+			dateEditor.setDate(calendar.getTime());
+		}
+	}
+
+	/**
+     * Enable or disable the JawDateChooser.
+     * 
+     * 
+     * @param enabled
+     *            the new enabled value
+     */
+	public void setEnabled(boolean enabled) {
+		super.setEnabled(enabled);
+		if (dateEditor != null) {
+			dateEditor.setEnabled(enabled);
+			calendarButton.setEnabled(enabled);
+		}
+	}
+
+	/**
+	 * Returns true, if enabled.
+	 * 
+	 * @return true, if enabled.
+	 */
+	public boolean isEnabled() {
+		return super.isEnabled();
+	}
+
+	/**
+	 * Sets the icon of the buuton.
+	 * 
+	 * @param icon
+	 *            The new icon
+	 */
+	public void setIcon(ImageIcon icon) {
+		calendarButton.setIcon(icon);
+	}
+
+	/**
+	 * Adds the listener to the date editor's property change listener.
+	 * 
+	 * @param listener
+	 *            the listener
+	 */
+	public void addPropertyChangeListener(PropertyChangeListener listener) {
+		dateEditor.addPropertyChangeListener(listener);
+	}
+
+	/**
+	 * Adds the listener for the given property name to the date editor's
+	 * property change listener.
+	 * 
+	 * @param propertyName
+	 *            the property to listen for, e.g. "date"
+	 * @param listener
+	 *            the listener
+	 */
+	public void addPropertyChangeListener(String propertyName,
+			PropertyChangeListener listener) {
+		dateEditor.addPropertyChangeListener(propertyName, listener);
+	}
+
+	/**
+	 * Removes the listener from the date editor's property change listeners.
+	 * 
+	 * @param listener
+	 *            the listener
+	 */
+	public void removePropertyChangeListener(PropertyChangeListener listener) {
+		dateEditor.removePropertyChangeListener(listener);
+	}
+
+	/**
+	 * Removes the listener from the date editor's property change listeners for
+	 * the specific property.
+	 * 
+	 * @param propertyName
+	 *            the property to listen for, e.g. "date"
+	 * @param listener
+	 *            the listener
+	 */
+	public void removePropertyChangeListener(String propertyName,
+			PropertyChangeListener listener) {
+		dateEditor.removePropertyChangeListener(propertyName, listener);
+	}
+
+	/**
+	 * Sets the font of all subcomponents.
+	 * 
+	 * @param font
+	 *            the new font
+	 */
+	public void setFont(Font font) {
+		if (isInitialized) {
+			dateEditor.getUiComponent().setFont(font);
+			jawcalendar.setFont(font);
+		}
+		super.setFont(font);
+	}
+
+	/**
+	 * Returns the JCalendar component. THis is usefull if you want to set some
+	 * properties.
+	 * 
+	 * @return the JCalendar
+	 */
+	public JawCalendar getJCalendar() {
+		return jawcalendar;
+	}
+
+	/**
+	 * Returns the calendar button.
+	 * 
+	 * @return the calendar button
+	 */
+	public JButton getCalendarButton() {
+		return calendarButton;
+	}
+
+	/**
+	 * Returns the date editor.
+	 * 
+	 * @return the date editor
+	 */
+	public IDateEditor getDateEditor() {
+		return dateEditor;
+	}
+
+	/**
+     * Creates a JFrame with a JawDateChooser inside and can be used for testing.
+     * 
+     * 
+     * @param s
+     *            The command line arguments
+     */
+	public static void main(String[] s) {
+		JFrame frame = new JFrame("JDateChooser");
+		JawDateChooser dateChooser = new JawDateChooser();
+		frame.getContentPane().add(dateChooser);
+		frame.pack();
+		frame.setVisible(true);
+	}
+
+}

@@ -1,0 +1,1226 @@
+#parse( "HeaderTemplate.vm" )
+#parse( "PerTableVariables.vm" )
+$codewriter.setCurrentFilename("$pkg", "${managerClass}.java")
+package $pkg;
+
+import java.sql.*;
+##import java.util.*;
+$userCode.getBlock($IMPORT_BLOCK)
+
+/**
+ * Handles database calls for the $tablename table.
+#if ( $codewriter.hasRemarks() )
+ * Remarks: $codewriter.getRemarks()
+#end
+ */
+public class $managerClass
+$userCode.getBlock($EXTENDS_BLOCK)
+{
+
+#foreach ( $column in $columns )
+#set ( $vcmo = $velocityCount - 1 )
+    /**
+     * Column $column.getName() of type $column.getJavaTypeAsTypeName() mapped to $column.getJavaType().
+     */
+    public static final int ID_$column.getConstName() = $vcmo;
+    public static final int TYPE_$column.getConstName() = $column.getJavaTypeAsTypeName();
+    public static final String NAME_$column.getConstName() = "$column.getName()";
+
+#end
+
+    private static final String TABLE_NAME = "$tablename";
+
+    /**
+     * Create an array of type string containing all the fields of the $tablename table.
+     */
+    private static final String[] FIELD_NAMES = 
+    {
+#foreach ( $column in $columns )
+        #if ( $velocityCount > 1 ),#end"$column.getFullName()"
+#end
+    };
+
+    /**
+     * Field that contains the comma separated fields of the $tablename table.
+     */
+    private static final String ALL_FIELDS = #foreach( $column in $columns )
+#if ( $velocityCount > 1 )
+
+                            + ",#else"#end$column.getFullName()"#end;
+
+    private static $managerClass singleton = new $managerClass();
+
+    /**
+     * Get the $managerClass singleton.
+     *
+     * @return $managerClass 
+     */
+    synchronized public static $managerClass getInstance()
+    {
+        return singleton;
+    }
+
+    /**
+     * Sets your own $managerClass instance.
+     <br>
+     * This is optional, by default we provide it for you.
+     */
+    synchronized public static void setInstance($managerClass instance)
+    {
+        singleton = instance;
+    }
+
+
+    /**
+     * Creates a new $beanClass instance.
+     *
+     * @return the new $beanClass 
+     */
+    public $beanClass create$beanClass()
+    {
+        return new $beanClass();
+    }
+
+#if ( $primaryKeys.size() > 0 )
+    //////////////////////////////////////
+    // PRIMARY KEY METHODS
+    //////////////////////////////////////
+
+#set ( $keys = "" )
+#foreach ( $pk in $primaryKeys )
+#if ( $velocityCount > 1 )#set( $keys = "$keys, " )#end
+#set ( $keys = "$keys${pk.getJavaType()} $strUtil.getVarName($pk)" )
+#end
+##set ( $noWhereSelect = "SELECT \" + ALL_FIELDS + \" FROM \" + $tablename" )
+##set ( $baseSelect = "$noWhereSelect WHERE " )
+#set ( $sql = "" )
+#foreach( $pk in $primaryKeys )
+#if ( $velocityCount > 1 )#set ( $sql = "$sql and " )#end
+#set ( $sql = "$sql$pk.getFullName()=?" )
+#end
+    /**
+     * Loads a $beanClass from the $tablename using its key fields.
+     *
+     * @return a unique $beanClass 
+     */
+    //12
+    public $beanClass loadByPrimaryKey($keys) throws SQLException
+    {
+        Connection c = null;
+        PreparedStatement ps = null;
+        try 
+        {
+            c = getConnection();
+            ps = c.prepareStatement("SELECT " + ALL_FIELDS + " FROM $tablename WHERE $sql",ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+#foreach( $pk in $primaryKeys )
+            $pk.getPreparedStatementMethod($strUtil.getVarName($pk), $velocityCount)
+#end
+            $beanClass pReturn[] = loadByPreparedStatement(ps);
+            if (pReturn.length < 1)
+                return null;
+            else
+                return pReturn[0];
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+
+#set ( $sql = "" )
+#foreach( $pk in $primaryKeys )
+#if ( $velocityCount > 1 )#set ( $sql = "$sql and " )#end
+#set ( $sql = "$!sql$pk.getFullName()=?" )
+#end
+    /**
+     * Deletes rows according to its keys.
+     *
+     * @return the number of deleted rows
+     */
+    //60
+    public int deleteByPrimaryKey($keys) throws SQLException
+    {
+        Connection c = null;
+        PreparedStatement ps = null;
+        try
+        {
+            c = getConnection();
+            ps = c.prepareStatement("DELETE from $tablename WHERE $sql",ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+#foreach( $pk in $primaryKeys )
+            $pk.getPreparedStatementMethod($strUtil.getVarName($pk), $velocityCount)
+#end
+            return ps.executeUpdate();
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+#end
+## ======================================================
+## xForeignKeys template
+## ======================================================
+#set ( $keysDone = [] )  
+
+#foreach ( $impKey in $importedKeys )
+#if ( $velocityCount == 1 )
+    
+    
+    //////////////////////////////////////
+    // FOREIGN KEY METHODS 
+    //////////////////////////////////////
+#end
+#if ( !$keysDone.contains( $impKey.getForeignKeyColName() ) )
+#if($keysDone.add($impKey.getForeignKeyColName()))#* garbage *##end
+
+    /**
+     * Loads $beanClass array from the $tablename table using its $impKey.getForeignKeyColName() field.
+     *
+     * @return an array of $beanClass 
+     */
+    // LOAD BY IMPORTED KEY
+    public $beanClass[] loadBy${strUtil.convertName($impKey.getForeignKeyColName())}($impKey.getJavaType() value) throws SQLException 
+    {
+        Connection c = null;
+        PreparedStatement ps = null;
+        try 
+        {
+            c = getConnection();
+            ps = c.prepareStatement("SELECT " + ALL_FIELDS + " FROM $tablename WHERE $impKey.getForeignKeyColName()=?",ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            $impKey.getPreparedStatementMethod("value", 1)
+            return loadByPreparedStatement(ps);
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+
+
+    /**
+     * Deletes from the $tablename table by $impKey.getForeignKeyColName() field.
+     *
+     * @param value the key value to seek
+     * @return the number of rows deleted
+     */
+    // DELETE BY IMPORTED KEY
+    public int deleteBy$strUtil.convertName($impKey.getForeignKeyColName())($impKey.getJavaType() value) throws SQLException 
+    {
+        Connection c = null;
+        PreparedStatement ps = null;
+        try 
+        {
+            c = getConnection();
+            ps = c.prepareStatement("DELETE FROM $tablename WHERE $impKey.getForeignKeyColName()=?");
+            $impKey.getPreparedStatementMethod("value", 1)
+            return ps.executeUpdate();
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+
+#end
+#end
+#set ( $keysImported = [] )
+#foreach ($impKey in $importedKeys)
+#if ( $velocityCount == 1 )
+
+
+    //////////////////////////////////////
+    // GET/SET FOREIGN KEY BEAN METHOD
+    //////////////////////////////////////
+#end
+#set ( $importedtable = $impKey.getTableName() )
+#set ( $importedClass = "$!classPrefix${strUtil.convertName($importedtable)}$BEAN_SUFFIX" )
+#set ( $importedClassManager = "$!classPrefix${strUtil.convertName($importedtable)}$MGR_SUFFIX" )
+#if ( !$keysImported.contains( $importedClass ) )
+#if ( $keysImported.add($importedClass) )#*squelch*##end
+#if ( $codewriter.log( "$impKey.getForeignKeyTabName().$impKey.getForeignKeyColName() -> $impKey.getTableName().$impKey.getName()" ) )#*squelch*##end
+    /**
+     * Retrieves the $importedClass object from the $tablename.$impKey.getName() field.
+     *
+     * @param pObject the $beanClass 
+     * @return the associated $importedClass pObject
+     */
+    // GET IMPORTED
+    public $importedClass get$importedClass($beanClass pObject) throws SQLException
+    {
+        $importedClass other = ${importedClassManager}.getInstance().create${importedClass}();
+        other.${strUtil.getSetMethod($impKey)}(pObject.${strUtil.getGetMethod($impKey.getForeignColumn())}());
+        return ${importedClassManager}.getInstance().loadUniqueUsingTemplate(other);
+    }
+
+    /**
+     * Associates the $beanClass object to the $importedClass object.
+     *
+     * @param pObject the $beanClass object to use
+     * @param pObjectToBeSet the $importedClass object to associate to the $beanClass 
+     * @return the associated $importedClass pObject
+     */
+    // SET IMPORTED
+    public $beanClass set${importedClass}($beanClass pObject,$importedClass pObjectToBeSet)
+    {
+        pObject.${strUtil.getSetMethod($impKey.getForeignColumn())}(pObjectToBeSet.${strUtil.getGetMethod($impKey)}());
+        return pObject;
+    }
+
+#end
+#end
+
+    //////////////////////////////////////
+    // LOAD ALL
+    //////////////////////////////////////
+
+    /**
+     * Loads all the rows from $tablename.
+     *
+     * @return an array of $managerClass pObject
+     */
+    //38
+    public $beanClass[] loadAll() throws SQLException 
+    {
+        return loadAll(1, -1);
+    }
+
+
+    /**
+     * Loads the given number of rows from $tablename, given the start row.
+     *
+     * @param startRow the start row to be used (first row = 1, last row = -1)
+     * @param numRows the number of rows to be retrieved (all rows = a negative number)
+     * @return an array of $managerClass pObject
+     */
+    //38.5
+    public $beanClass[] loadAll(int startRow, int numRows) throws SQLException 
+    {
+        Connection c = null;
+        PreparedStatement ps = null;
+        try 
+        {
+            c = getConnection();
+            ps = c.prepareStatement("SELECT " + ALL_FIELDS + " FROM $tablename",ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            return loadByPreparedStatement(ps, null, startRow, numRows);
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+
+    //////////////////////////////////////
+    // SQL 'WHERE' METHOD
+    //////////////////////////////////////
+    /**
+     * Retrieves an array of $beanClass given a sql 'where' clause.
+     *
+     * @param where the sql 'where' clause
+     * @return the resulting $beanClass table 
+     */
+    //49
+    public $beanClass[] loadByWhere(String where) throws SQLException
+    {
+        return loadByWhere(where, null);
+    }
+
+    /**
+     * Retrieves an array of $beanClass given a sql where clause, and a list of fields.
+     * It is up to you to pass the 'WHERE' in your where clausis.
+     *
+     * @param where the sql 'where' clause
+     * @param fieldList table of the field's associated constants
+     * @return the resulting $beanClass table 
+     */
+    //51
+    public $beanClass[] loadByWhere(String where, int[] fieldList) throws SQLException
+    {
+        return loadByWhere(where, null, 1, -1);
+    }
+
+    /**
+     * Retrieves an array of $beanClass given a sql where clause and a list of fields, and startRow and numRows.
+     * It is up to you to pass the 'WHERE' in your where clausis.
+     *
+     * @param where the sql 'where' clause
+     * @param startRow the start row to be used (first row = 1, last row = -1)
+     * @param numRows the number of rows to be retrieved (all rows = a negative number)
+     * @param fieldList table of the field's associated constants
+     * @return the resulting $beanClass table 
+     */
+    //51.5
+    public $beanClass[] loadByWhere(String where, int[] fieldList, int startRow, int numRows) throws SQLException
+    {
+        String sql = null;
+        if(fieldList == null)
+            sql = "select " + ALL_FIELDS + " from $tablename " + where;
+        else
+        {
+            StringBuffer buff = new StringBuffer(128);
+            buff.append("select ");
+            for(int i = 0; i < fieldList.length; i++)
+            {
+                if(i != 0)
+                    buff.append(",");
+                buff.append(FIELD_NAMES[fieldList[i]]);
+            }
+            buff.append(" from $tablename ");
+            buff.append(where);
+            sql = buff.toString();
+            buff = null;
+        }
+        Connection c = null;
+        Statement pStatement = null;
+        ResultSet rs =  null;
+        java.util.ArrayList v = null;
+        try 
+        {
+            c = getConnection();
+            pStatement = c.createStatement();
+            rs =  pStatement.executeQuery(sql);
+            v = new java.util.ArrayList();
+            int count = 0;
+            if (rs.absolute(startRow) && numRows!=0) {
+                do
+                {
+                    if(fieldList == null)
+                        v.add(decodeRow(rs));
+                    else 
+                        v.add(decodeRow(rs, fieldList));
+                    count++;
+                } while ( (count<numRows||numRows<0) && rs.next() );
+            }
+
+            return ($beanClass[])v.toArray(new $beanClass[0]);
+        }
+        finally
+        {
+            if (v != null) { v.clear(); }
+            getManager().close(pStatement, rs);
+            freeConnection(c);
+        }
+    }
+
+
+    /**
+     * Deletes all rows from $tablename table.
+     * @return the number of deleted rows.
+     */
+    public int deleteAll() throws SQLException
+    {
+        return deleteByWhere("");
+    }
+
+
+    /**
+     * Deletes rows from the $tablename table using a 'where' clause.
+     * It is up to you to pass the 'WHERE' in your where clausis.
+     * <br>Attention, if 'WHERE' is omitted it will delete all records. 
+     *
+     * @param where the sql 'where' clause
+     * @return the number of deleted rows
+     */
+    public int deleteByWhere(String where) throws SQLException
+    {
+        Connection c = null;
+        PreparedStatement ps = null;
+
+        try
+        {
+            c = getConnection();
+            String delByWhereSQL = "DELETE FROM $tablename " + where;
+            ps = c.prepareStatement(delByWhereSQL);
+            return ps.executeUpdate();
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+
+
+
+    ///////////////////////////////////////////////////////////////////////
+    // SAVE 
+    ///////////////////////////////////////////////////////////////////////
+    /**
+     * Saves the $beanClass pObject into the database.
+     *
+     * @param pObject the $beanClass pObject to be saved
+     */
+    //100
+    public $beanClass save($beanClass pObject) throws SQLException
+    {
+        Connection c = null;
+        PreparedStatement ps = null;
+        StringBuffer _sql = null;
+
+        try
+        {
+            c = getConnection();
+            if (pObject.isNew())
+            { // SAVE 
+##-------------writePreInsert
+#set( $genKeyRetrieve = $codewriter.getProperty("generatedkey.retrieve", "") )
+#set ( $hint = $codewriter.getProperty("generatedkey.statement").replaceAll("<TABLE>", $tablename) )
+#if ( $primaryKeys.size() > 0 )#set ( $pKey = $primaryKeys.get(0) )#end
+#if ( $genKeyRetrieve == "before" && $primaryKeys.size() == 1 && $pKey.isColumnNumeric() )
+                if (!pObject.$strUtil.getModifiedMethod($pKey)())
+                {
+                    ps = c.prepareStatement("$hint");
+                    ResultSet rs = null;
+                    try
+                    {
+                        rs = ps.executeQuery();
+                        if(rs.next())
+                            pObject.$strUtil.getSetMethod($pKey)($pKey.getResultSetMethodObject("1"));
+                        else
+                            getManager().log("ATTENTION: Could not retrieve generated key!");
+                    }
+                    finally
+                    {
+                        getManager().close(ps, rs);
+                        ps=null;
+                    }
+                }
+#end
+##------------/writePreInsert      
+                beforeInsert(pObject); // listener callback
+                int _dirtyCount = 0;
+#set ( $isPresentLock = $codewriter.isPresentLock( $columns ) )
+#if ( $isPresentLock )
+#set ($lockColumn = $codewriter.getLockColumn($columns))
+            pObject.$strUtil.getSetMethod($lockColumn)(new $lockColumn.getJavaType()(String.valueOf(System.curentTimeMillis())));
+            
+#end
+                _sql = new StringBuffer("INSERT into $tablename (");
+    
+#foreach( $column in $columns )
+                if (pObject.$strUtil.getModifiedMethod($column)()) {
+                    if (_dirtyCount>0) {
+                        _sql.append(",");
+                    }
+                    _sql.append("$column.getName()");
+                    _dirtyCount++;
+                }
+
+#end
+                _sql.append(") values (");
+                if(_dirtyCount > 0) {
+                    _sql.append("?");
+                    for(int i = 1; i < _dirtyCount; i++) {
+                        _sql.append(",?");
+                    }
+                }
+                _sql.append(")");
+
+#if ( $genKeyRetrieve == "auto" )
+#set( $prepStatementArgs = "Statement.RETURN_GENERATED_KEYS" )
+#else
+#set( $prepStatementArgs = "ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY" )
+#end
+                ps = c.prepareStatement(_sql.toString(), $prepStatementArgs);
+                _dirtyCount = 0;
+
+#foreach ( $column in $columns ) 
+                if (pObject.$strUtil.getModifiedMethod($column)()) {
+                    $column.getPreparedStatementMethod("pObject.$strUtil.getGetMethod($column)()","++_dirtyCount")
+                }
+    
+#end
+                ps.executeUpdate();
+##------------------writePostInsert
+#if ( $primaryKeys.size() == 1 )
+#set($pKey = $primaryKeys.get(0))
+#if ( $pKey.isColumnNumeric() )
+#set ( $hint = $codewriter.getProperty("generatedkey.statement").replaceAll("<TABLE>", $tablename) )
+#if ( $genKeyRetrieve == "after" )
+                
+                if (!pObject.$strUtil.getModifiedMethod($pKey)())
+                {
+                    PreparedStatement ps2 = null;
+                    ResultSet rs = null;
+                    try { 
+                        ps2 = c.prepareStatement("$hint");
+                        rs = ps2.executeQuery();
+                        if(rs.next()) {
+                            pObject.$strUtil.getSetMethod($pKey)($pKey.getResultSetMethodObject("1"));
+                        } else {
+                            getManager().log("ATTENTION: Could not retrieve generated key!");
+                        }
+                    } finally { 
+                        getManager().close(ps2, rs);
+                    }
+                }
+#elseif ( $genKeyRetrieve == "auto" )
+                if (!pObject.$strUtil.getModifiedMethod($pKey)())
+                {
+                    ResultSet rs = ps.getGeneratedKeys();
+                    try { 
+                        if(rs.next())
+                            pObject.$strUtil.getSetMethod($pKey)($pKey.getResultSetMethodObject("1"));
+                        else
+                            getManager().log("ATTENTION: Could not retrieve auto generated key!");
+                    } finally { 
+                        getManager().close(rs);
+                    }
+                }
+#end
+#end
+#end
+##-------------------/writePostInsert
+    
+                pObject.isNew(false);
+                pObject.resetIsModified();
+                afterInsert(pObject); // listener callback
+            }
+            else 
+            { // UPDATE 
+#if ( $primaryKeys.size() == 0 )
+$codewriter.log("!! WARNING !! $tablename does not have any primary key...")
+#end
+                beforeUpdate(pObject); // listener callback
+#if ( $isPresentLock )
+                $lockColumn.getJavaType() oldLockValue = pObject.$strUtil.getGetMethod($lockColumn)();
+                pObject.$strUtil.getSetMethod($lockColumn))(new $lockColumn.getJavaType()(String.valueOf(System.currentTimeMillis())));
+    
+#end
+                _sql = new StringBuffer("UPDATE $tablename SET ");
+                boolean useComma=false;
+#foreach( $column in $columns )
+
+                if (pObject.$strUtil.getModifiedMethod($column)()) {
+                    if (useComma) {
+                        _sql.append(",");
+                    } else {
+                        useComma=true;
+                    }
+                    _sql.append("$column.getName()").append("=?");
+                }
+#end
+#if ( $primaryKeys.size() > 0 )
+                _sql.append(" WHERE ");
+#end
+#set ($sql = "" )
+#macro ( sqlAppend $somestr )
+#set ( $sql = "$!sql$somestr" )
+#end
+#foreach( $primaryKey in $primaryKeys )
+#if ( $velocityCount > 1 )#sqlAppend( " AND " )#end
+#sqlAppend( "$primaryKey.getFullName()=?" )
+#end
+#if ( $isPresentLock )
+#if ( $primaryKeys.size() > 0 )#sqlAppend( " AND " )#end
+#sqlAppend( "$lockColumn.getFullName()=?")
+#end
+                _sql.append("$sql");
+                ps = c.prepareStatement(_sql.toString(),ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                int _dirtyCount = 0;
+#foreach( $column in $columns )
+
+                if (pObject.$strUtil.getModifiedMethod($column)()) {
+##//                   if (pObject.$strUtil.getGetMethod($column)() == null)
+##//                      ps.setNull(++_dirtyCount, "+cols[i].getJavaTypeAsTypeName()+");
+##//                   else
+                      $column.getPreparedStatementMethod("pObject.$strUtil.getGetMethod($column)()","++_dirtyCount")
+                }
+#end
+    
+                if (_dirtyCount == 0) {
+                     return pObject;
+                }
+    
+#foreach ( $pKey in $primaryKeys )
+                $pKey.getPreparedStatementMethod("pObject.$strUtil.getGetMethod($pKey)()", "++_dirtyCount")
+#end
+#if ( $isPresentLock )
+                      $lockColumn.getPreparedStatementMethod( "oldLockValue", "++_dirtyCount")
+                if (ps.executeUpdate()==0) {
+                    throw new SQLException("sql2java.exception.optimisticlock");
+                }
+#else
+                ps.executeUpdate();
+#end
+                pObject.resetIsModified();
+                afterUpdate(pObject); // listener callback
+            }
+    
+            return pObject;
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+
+
+
+    /**
+     * Saves an array of $beanClass pObjects into the database.
+     *
+     * @param pObjects the $beanClass pObject table to be saved
+     * @return the saved $beanClass array.
+##        // TODO: BATCH UPDATE
+     */
+    //65
+    public $beanClass[] save($beanClass[] pObjects) throws SQLException 
+    {
+        for (int iIndex = 0; iIndex < pObjects.length; iIndex ++){
+            save(pObjects[iIndex]);
+        }
+        return pObjects;
+    }
+
+
+
+    ///////////////////////////////////////////////////////////////////////
+    // USING TEMPLATE 
+    ///////////////////////////////////////////////////////////////////////
+    /**
+     * Loads a unique $beanClass pObject from a template one giving a c
+     *
+     * @param pObject the $beanClass pObject to look for
+     * @return the pObject matching the template
+     */
+    //85
+    public $beanClass loadUniqueUsingTemplate($beanClass pObject) throws SQLException
+    {
+         $beanClass[] pReturn = loadUsingTemplate(pObject);
+         if (pReturn.length == 0)
+             return null;
+         if (pReturn.length > 1)
+             throw new SQLException("More than one element !!");
+         return pReturn[0];
+     }
+
+    /**
+     * Loads an array of $beanClass from a template one.
+     *
+     * @param pObject the $beanClass template to look for
+     * @return all the $beanClass matching the template
+     */
+    //88
+    public $beanClass[] loadUsingTemplate($beanClass pObject) throws SQLException
+    {
+        return loadUsingTemplate(pObject, 1, -1);
+    }
+    /**
+     * Loads an array of $beanClass from a template one, given the start row and number of rows.
+     *
+     * @param pObject the $beanClass template to look for
+     * @param startRow the start row to be used (first row = 1, last row=-1)
+     * @param numRows the number of rows to be retrieved (all rows = a negative number)
+     * @return all the $beanClass matching the template
+     */
+    //88.5
+    public $beanClass[] loadUsingTemplate($beanClass pObject, int startRow, int numRows) throws SQLException
+    {
+        Connection c = null;
+        PreparedStatement ps = null;
+        StringBuffer where = new StringBuffer("");
+        StringBuffer _sql = new StringBuffer("SELECT " + ALL_FIELDS + " from $tablename WHERE ");
+        StringBuffer _sqlWhere = new StringBuffer("");
+        try
+        {
+            int _dirtyCount = 0;
+    
+#foreach( $column in $columns ) 
+             if (pObject.$strUtil.getModifiedMethod($column)()) {
+                 _dirtyCount ++; 
+                 _sqlWhere.append((_sqlWhere.length() == 0) ? " " : " AND ").append("$column.getName()= ?");
+             }
+    
+#end
+             if (_dirtyCount == 0) {
+                 throw new SQLException ("The pObject to look for is invalid : not initialized !");
+             }
+             _sql.append(_sqlWhere);
+             c = getConnection();
+             ps = c.prepareStatement(_sql.toString(),ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+             _dirtyCount = 0;
+    
+#foreach ( $column in $columns )
+             if (pObject.$strUtil.getModifiedMethod($column)()) {
+                 $column.getPreparedStatementMethod("pObject.$strUtil.getGetMethod($column)()", "++_dirtyCount")
+             }
+    
+#end
+             ps.executeQuery();
+             return loadByPreparedStatement(ps, null, startRow, numRows);
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+    /**
+     * Deletes rows using a $beanClass template.
+     *
+     * @param pObject the $beanClass object(s) to be deleted
+     * @return the number of deleted objects
+     */
+    //63
+    public int deleteUsingTemplate($beanClass pObject) throws SQLException
+    {
+#if ( $primaryKeys.size() == 1)
+        if (pObject.$strUtil.getInitializedMethod($primaryKeys.get(0))())
+            return deleteByPrimaryKey(pObject.$strUtil.getGetMethod($primaryKeys.get(0))());
+    
+#end
+        Connection c = null;
+        PreparedStatement ps = null;
+        StringBuffer sql = null;
+    
+        try 
+        {
+            sql = new StringBuffer("DELETE FROM $tablename WHERE ");
+            int _dirtyAnd = 0;
+#foreach ( $column in $columns )
+            if (pObject.$strUtil.getInitializedMethod($column)()) {
+                if (_dirtyAnd > 0)
+                    sql.append(" AND ");
+                sql.append("$column.getName()").append("=?");
+                _dirtyAnd ++;
+            }
+    
+#end
+            c = getConnection();
+            ps = c.prepareStatement(sql.toString(),ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            int _dirtyCount = 0;
+#foreach( $column in $columns )
+    
+            if (pObject.$strUtil.getInitializedMethod($column)()) {
+                $column.getPreparedStatementMethod("pObject.$strUtil.getGetMethod($column)()", "++_dirtyCount")
+            }
+#end
+    
+            int _rows = ps.executeUpdate();
+            return _rows;
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+
+## Many to Many needs to be templataized.
+#set ( $rTables = $codewriter.getRelationTable() )
+#foreach ( $rTable in $rTables )
+#*   *##set ( $oVelocityCount = $velocityCount )
+#*   *##set ( $lTables = $rTable.linkedTables($db, $codewriter.getTable() ) )
+#*   *##set ( $rName = $rTable.getName() )
+#*   *##foreach ( $lTable in $lTables )
+#*      *##set ( $lName = $lTable.getName() )
+#*      *##if ( $velocityCount == 1 && $oVelocityCount == 1 )
+    
+    
+    ///////////////////////////////////////////////////////////////////////
+    // MANY TO MANY: LOAD OTHER BEAN VIA JUNCTION TABLE 
+    ///////////////////////////////////////////////////////////////////////
+#*      *##end
+#set ( $strLinkedCore = "$!classPrefix$strUtil.convertName($lName )" )
+#set ( $strLinkedBean = "$strLinkedCore$BEAN_SUFFIX" )
+#set ( $strLinkedManager = "$strLinkedCore$MGR_SUFFIX" )
+#set ( $strRelationCore = "$!classPrefix$strUtil.convertName($rName )" )
+#set ( $strRelationBean = "$strRelationCore$BEAN_SUFFIX" )
+#set ( $localKey = $rTable.getForeignKeyFor( $codewriter.table ) )
+#set ( $externalKey = $rTable.getForeignKeyFor( $lTable ) )
+    /**
+     * Retrieves an array of $strLinkedBean using the relation table $strRelationCore given a $beanClass object.
+     *
+     * @param pObject the $beanClass pObject to be used
+     * @return an array of $strLinkedBean 
+     */
+    // MANY TO MANY
+    public $strLinkedBean[] load${strLinkedCore}Via$strRelationCore($beanClass pObject) throws SQLException
+    {
+         return load${strLinkedCore}Via$strRelationCore(pObject, 1, -1);
+    }
+
+    /**
+     * Retrieves an array of $strLinkedBean using the relation table $strRelationCore given a $beanClass object, specifying the start row and the number of rows.
+     *
+     * @param pObject the $beanClass pObject to be used
+     * @param startRow the start row to be used (first row = 1, last row = -1)
+     * @param numRows the number of rows to be retrieved (all rows = a negative number)
+     * @return an array of $strLinkedBean 
+     */
+    // MANY TO MANY
+    public $strLinkedBean[] load${strLinkedCore}Via$strRelationCore($beanClass pObject, int startRow, int numRows) throws SQLException
+    {
+         Connection c = null;
+         PreparedStatement ps = null;
+         String strSQL =      " SELECT "
+                         + "        *"
+                         + " FROM  "
+                         + "        $lName,$rName"
+                         + " WHERE "    
+                         + "     $localKey.getForeignKeyTabName().$localKey.getForeignKeyColName() = ?"
+                         + " AND $externalKey.getForeignKeyTabName().$externalKey.getForeignKeyColName() = $externalKey.getTableName().$externalKey.getName()";
+         try
+         {
+             c = getConnection();
+             ps = c.prepareStatement(strSQL,ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+             $localKey.getPreparedStatementMethod("pObject.$strUtil.getGetMethod($localKey)()", 1)
+             return ${strLinkedManager}.getInstance().loadByPreparedStatement(ps, null, startRow, numRows);
+         }
+         finally
+         {
+            getManager().close(ps);
+            freeConnection(c);
+         }
+    }
+#*   *##end
+
+#end
+
+
+    ///////////////////////////////////////////////////////////////////////
+    // COUNT 
+    ///////////////////////////////////////////////////////////////////////
+
+    /**
+     * Retrieves the number of rows of the table $tablename.
+     *
+     * @return the number of rows returned
+     */
+    //78
+    public int countAll() throws SQLException
+    {
+        return countWhere("");
+    }
+
+
+
+    /**
+     * Retrieves the number of rows of the table $tablename with a 'where' clause.
+     * It is up to you to pass the 'WHERE' in your where clausis.
+     *
+     * @param where the restriction clause
+     * @return the number of rows returned
+     */
+    public int countWhere(String where) throws SQLException
+    {
+        String sql = "select count(*) as MCOUNT from $tablename " + where;
+        Connection c = null;
+        Statement pStatement = null;
+        ResultSet rs =  null;
+        try 
+        {
+            int iReturn = -1;    
+            c = getConnection();
+            pStatement = c.createStatement();
+            rs =  pStatement.executeQuery(sql);
+            if (rs.next())
+            {
+                iReturn = rs.getInt("MCOUNT");
+            }
+            if (iReturn != -1)
+                return iReturn;
+        }
+        finally
+        {
+            getManager().close(pStatement, rs);
+            freeConnection(c);
+        }
+       throw new SQLException("Error in countWhere");
+    }
+
+    /**
+     * Retrieves the number of rows of the table $tablename with a prepared statement.
+     *
+     * @param ps the PreparedStatement to be used
+     * @return the number of rows returned
+     */
+    //82
+    int countByPreparedStatement(PreparedStatement ps) throws SQLException
+    {
+        ResultSet rs =  null;
+        try 
+        {
+            int iReturn = -1;
+            rs = ps.executeQuery();
+            if (rs.next())
+                iReturn = rs.getInt("MCOUNT");
+            if (iReturn != -1)
+                return iReturn;
+        }
+        finally
+        {
+            getManager().close(rs);
+        }
+       throw new SQLException("Error in countByPreparedStatement");
+    }
+
+    /**
+     * Looks for the number of elements of a specific $beanClass pObject given a c
+     *
+     * @param pObject the $beanClass pObject to look for
+     * @return the number of rows returned
+     */
+    //83
+    public int countUsingTemplate($beanClass pObject) throws SQLException
+    {
+        StringBuffer where = new StringBuffer("");
+        Connection c = null;
+        PreparedStatement ps = null;
+        StringBuffer _sql = null;
+        StringBuffer _sqlWhere = null;
+    
+        try
+        {
+                _sql = new StringBuffer("SELECT count(*) as MCOUNT  from $tablename WHERE ");
+                _sqlWhere = new StringBuffer("");
+                int _dirtyCount = 0;
+#foreach( $column in $columns )
+    
+                if (pObject.$strUtil.getModifiedMethod($column)()) {
+                    _dirtyCount++; 
+                    _sqlWhere.append((_sqlWhere.length() == 0) ? " " : " AND ").append("$column.getName()= ?");
+                }
+#end
+    
+                if (_dirtyCount == 0)
+                   throw new SQLException ("The pObject to look is unvalid : not initialized !");
+    
+                _sql.append(_sqlWhere);
+                c = getConnection();
+                ps = c.prepareStatement(_sql.toString(),ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    
+                _dirtyCount = 0;
+    
+#foreach ( $column in $columns )
+                if (pObject.$strUtil.getModifiedMethod($column)()) {
+                    $column.getPreparedStatementMethod("pObject.$strUtil.getGetMethod($column)()","++_dirtyCount")
+                }
+    
+#end
+                return countByPreparedStatement(ps);
+        }
+        finally
+        {
+            getManager().close(ps);
+            freeConnection(c);
+        }
+    }
+
+
+
+    ///////////////////////////////////////////////////////////////////////
+    // DECODE RESULT SET 
+    ///////////////////////////////////////////////////////////////////////
+    /**
+     * Transforms a ResultSet iterating on the $tablename on a $beanClass pObject.
+     *
+     * @param rs the ResultSet to be transformed
+     * @return pObject resulting $beanClass pObject
+     */
+    //72
+    public $beanClass decodeRow(ResultSet rs) throws SQLException
+    {
+        $beanClass pObject = create$beanClass();
+## the set statement casts $velocityCount to a string
+#foreach ( $column in $columns )
+#set ($vCount = "$velocityCount" )
+        pObject.$strUtil.getSetMethod($column)($column.getResultSetMethodObject($vCount));
+#end
+
+        pObject.isNew(false);
+        pObject.resetIsModified();
+
+        return pObject;
+    }
+
+    /**
+     * Transforms a ResultSet iterating on the $tablename table on a $beanClass pObject according to a list of fields.
+     *
+     * @param rs the ResultSet to be transformed
+     * @param fieldList table of the field's associated constants
+     * @return pObject resulting $beanClass pObject
+     */
+    //73
+    public $beanClass decodeRow(ResultSet rs, int[] fieldList) throws SQLException
+    {
+        $beanClass pObject = create$beanClass();
+        int pos = 0;
+        for(int i = 0; i < fieldList.length; i++)
+        {
+            switch(fieldList[i]) {
+#foreach( $column in $columns )
+                case ID_$column.getConstName():
+                    ++pos;
+                    pObject.$strUtil.getSetMethod($column)($column.getResultSetMethodObject("pos"));
+                    break;
+#end
+            }
+        }
+        pObject.isNew(false);
+        pObject.resetIsModified();
+
+        return pObject;
+    }
+
+    //////////////////////////////////////
+    // PREPARED STATEMENT LOADER
+    //////////////////////////////////////
+
+    /**
+     * Loads all the elements using a prepared statement.
+     *
+     * @param ps the PreparedStatement to be used
+     * @return an array of $beanClass 
+     */
+    //41
+    public $beanClass[] loadByPreparedStatement(PreparedStatement ps) throws SQLException
+    {
+        return loadByPreparedStatement(ps, null);
+    }
+
+    /**
+     * Loads all the elements using a prepared statement specifying a list of fields to be retrieved.
+     *
+     * @param ps the PreparedStatement to be used
+     * @param fieldList table of the field's associated constants
+     * @return an array of $beanClass 
+     */
+    public $beanClass[] loadByPreparedStatement(PreparedStatement ps, int[] fieldList) throws SQLException
+    {
+        return loadByPreparedStatement(ps, fieldList, 1, -1);
+    }
+
+    /**
+     * Loads all the elements using a prepared statement specifying a list of fields to be retrieved,
+     * and specifying the start row and the number of rows.
+     *
+     * @param ps the PreparedStatement to be used
+     * @param startRow the start row to be used (first row = 1, last row = -1)
+     * @param numRows the number of rows to be retrieved (all rows = a negative number)
+     * @param fieldList table of the field's associated constants
+     * @return an array of $beanClass 
+     */
+    //41.5
+    public $beanClass[] loadByPreparedStatement(PreparedStatement ps, int[] fieldList, int startRow, int numRows) throws SQLException
+    {
+        ResultSet rs =  null;
+        java.util.ArrayList v =  null;
+        try
+        {
+            rs =  ps.executeQuery();
+            v = new java.util.ArrayList();
+            int count = 0;
+            if (rs.absolute(startRow) && numRows!=0) {
+                do
+                {
+                    if(fieldList == null)
+                        v.add(decodeRow(rs));
+                    else 
+                        v.add(decodeRow(rs, fieldList));
+                    count++;
+                } while ( (count<numRows||numRows<0) && rs.next() );
+            }
+            return ($beanClass[])v.toArray(new $beanClass[0]);
+        }
+        finally
+        {
+            if (v != null) { v.clear(); v = null;}
+            getManager().close(rs);
+        }
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // LISTENER 
+    ///////////////////////////////////////////////////////////////////////
+    private $listenerClass listener = null;
+
+    /**
+     * Registers a unique $listenerClass listener.
+     */
+    //66.5
+    public void registerListener($listenerClass listener) {
+        this.listener = listener;
+    }
+
+    /**
+     * Before the save of the $beanClass pObject.
+     *
+     * @param pObject the $beanClass pObject to be saved
+     */
+    //67
+    void beforeInsert($beanClass pObject) throws SQLException {
+        if (listener != null)
+            listener.beforeInsert(pObject);
+    }
+
+    /**
+     * After the save of the $beanClass pObject.
+     *
+     * @param pObject the $beanClass pObject to be saved
+     */
+    //68
+    void afterInsert($beanClass pObject) throws SQLException {
+        if (listener != null)
+            listener.afterInsert(pObject);
+    }
+
+    /**
+     * Before the update of the $beanClass pObject.
+     *
+     * @param pObject the $beanClass pObject to be updated
+     */
+    //69
+    void beforeUpdate($beanClass pObject) throws SQLException {
+        if (listener != null)
+            listener.beforeUpdate(pObject);
+    }
+
+    /**
+     * After the update of the $beanClass pObject.
+     *
+     * @param pObject the $beanClass pObject to be updated
+     */
+    //70
+    void afterUpdate($beanClass pObject) throws SQLException {
+        if (listener != null)
+            listener.afterUpdate(pObject);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // UTILS  
+    ///////////////////////////////////////////////////////////////////////
+
+    /**
+     * Retrieves the manager object used to get connections.
+     *
+     * @return the manager used
+     */
+    //2
+    Manager getManager() {
+        return Manager.getInstance();
+    }
+
+    /**
+     * Frees the connection.
+     *
+     * @param c the connection to release
+     */
+    void freeConnection(Connection c) {
+        getManager().releaseConnection(c); // back to pool
+    }
+    /**
+     * Gets the connection.
+     */
+    Connection getConnection() throws SQLException {
+        return getManager().getConnection();
+    }
+
+$userCode.getBlock( $CLASS_BLOCK )
+}

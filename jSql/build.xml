@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+===============================================================================
+jSql Application build file
+===============================================================================
+
+A "project" describes a set of targets that may be requested when Ant is
+executed.  The "default" attribute defines the target which is executed if no
+specific target is requested, and the "basedir" attribute defines the current
+working directory from which Ant executes the requested task.  This is normally
+set to the current working directory.
+
+Copyright (c) 2004 The Jackson Laboratory.  All rights reserved.
+===============================================================================
+-->
+
+<project name="jSql" default="usage" basedir=".">
+
+<description>
+    jSql is a Java based SQL client.
+</description>
+
+<!--
+===============================================================================
+                        Property Definitions
+===============================================================================
+
+Each of the following properties are used in the build script.  Values for
+these properties are set by the first place they are defined, from the
+following list:
+
+    * Definitions on the "ant" command line (ant -Dfoo=bar compile).
+
+    * Definitions from a "build.properties" file in the top level source
+      directory of this application.
+
+    * Definitions from a "build.properties" file in the developer's home
+      directory.
+
+    * Default definitions in this build.xml file.
+
+You will note below that property values can be composed based on the contents
+of previously defined properties.  This is a powerful technique that helps you
+minimize the number of changes required when your development environment is
+modified.  Note that property composition is allowed within "build.properties"
+files as well as in the "build.xml" script.
+-->
+
+<property file="build.properties"/>
+<property file="${user.home}/build.properties"/>
+
+<!--
+===============================================================================
+                         File and Directory Names
+===============================================================================
+
+These properties generally define file and directory names (or paths) that
+affect where the build process stores its outputs.
+
+    app.name             Base name of this application, used to
+                         construct filenames and directories.
+                         Defaults to "myapp".
+
+    app.path             Context path to which this application should be
+                         deployed (defaults to "/" plus the value of the
+                         "app.name" property).
+
+    app.version          Version number of this iteration of the application.
+
+    build.home           The directory into which the "prepare" and
+                         "compile" targets will generate their output.
+                         Defaults to "build".
+
+    catalina.home        The directory in which you have installed
+                         a binary distribution of Tomcat 5.  This will
+                         be used by the "deploy" target.
+
+    dist.home            The name of the base directory in which
+                         distribution files are created.
+                         Defaults to "dist".
+
+    lib.home             The name of the base directory in which JAR files
+                         are stored.
+
+    manager.password     The login password of a user that is assigned the
+                         "manager" role (so that he or she can execute
+                         commands via the "/manager" web application)
+
+    manager.url          The URL of the "/manager" web application on the
+                         Tomcat installation to which we will deploy web
+                         applications and web services.
+
+    manager.username     The login username of a user that is assigned the
+                         "manager" role (so that he or she can execute
+                         commands via the "/manager" web application)
+-->
+
+<property name="app.name"         value="jSql"/>
+<property name="app.version"      value="1"/>
+<property name="build.home"       value="${basedir}/build"/>
+<property name="dist.home"        value="${basedir}/dist"/>
+<property name="dist.jar.name"    value="${app.name}.jar"/>
+<property name="dist.zip.name"    value="${app.name}.zip"/>
+<property name="docs.home"        value="${basedir}/docs"/>
+<property name="lib.home"         value="${basedir}/lib"/>
+<property name="src.home"         value="${basedir}/src"/>
+<property name="tests.home"       value="${basedir}/tests"/>
+<property name="install.jar.name" value="${app.name}-Install.jar"/>
+<property name="install.zip.name" value="${app.name}-Install.zip"/>
+
+<!--
+<property name="catalina.home" value=""/>
+<property name="app.path"      value="/${app.name}"/>
+<property name="web.home"      value="${basedir}/web"/>
+<property name="manager.url"   value=""/>
+-->
+
+
+<!--
+===============================================================================
+                        Custom Ant Task Definitions
+===============================================================================
+
+None
+-->
+
+<!--
+===============================================================================
+                        Compilation Control Options
+===============================================================================
+
+These properties control option settings on the Javac compiler when it is
+invoked using the <javac> task.
+
+    compile.debug        Should compilation include the debug option?
+
+    compile.deprecation  Should compilation include the deprecation option?
+
+    compile.optimize     Should compilation include the optimize option?
+-->
+
+<property name="compile.debug"       value="true"/>
+<property name="compile.deprecation" value="true"/>
+<property name="compile.optimize"    value="true"/>
+
+
+<!--
+===============================================================================
+                        External Dependencies
+===============================================================================
+
+Use property values to define the locations of external JAR files on which
+your application will depend.  In general, these values will be used for two
+purposes:
+
+    * Inclusion on the classpath that is passed to the Javac compiler
+
+    * Being copied into the "/WEB-INF/lib" directory during execution
+      of the "deploy" target.
+
+For web applications, we will automatically include all of the Java classes
+that Tomcat 5 exposes to web applications, so we will not need to explicitly
+list any of those dependencies.  You only need to worry about external
+dependencies for JAR files that you are going to include inside your
+"/WEB-INF/lib" directory.
+-->
+
+<property name="JavaToHTML.jar"
+          value="${lib.home}/JavaToHTML.jar"/>
+
+<property name="sybase.jar"
+          value="${lib.home}/jconn2.jar"/>
+
+<property name="oracle.jar"
+          value="${lib.home}/ojdbc14.jar"/>
+
+<property name="mysql.jar"
+          value="${lib.home}/mysql-3.0.7.jar"/>
+
+<property name="RDBMSConnectionPool.jar"
+          value="${lib.home}/RDBMSConnectionPool.jar"/>
+
+<property name="JSortTable.jar"
+          value="${lib.home}/JSortTable.jar"/>
+
+<property name="looks.jar"
+          value="${lib.home}/looks-1.2.1.jar"/>
+
+<property name="liquidlnf.jar"
+          value="${lib.home}/liquidlnf.jar"/>
+
+<property name="oalnf.jar"
+          value="${lib.home}/oalnf.jar"/>
+
+<property name="AbsoluteLayout.jar"
+          value="${lib.home}/AbsoluteLayout.jar"/>
+
+<property name="swing-layout.jar"
+          value="${lib.home}/swing-layout-1.0.jar"/>
+
+<filelist id="libfiles"
+    dir="${lib.home}"
+    files="ojdbc14.jar jconn2.jar mysql-3.0.7.jar RDBMSConnectionPool.jar looks-1.2.1.jar oalnf.jar liquidlnf.jar AbsoluteLayout.jar swing-layout-1.0.jar"/>
+
+
+<!--
+===============================================================================
+                        Compilation Classpath
+===============================================================================
+
+Rather than relying on the CLASSPATH environment variable, Ant includes
+features that makes it easy to dynamically construct the classpath you need for
+each compilation.
+-->
+
+<path id="compile.classpath">
+
+    <!-- Include all JAR files that will be included -->
+    <pathelement location="${RDBMSConnectionPool.jar}"/>
+    <pathelement location="${JSortTable.jar}"/>
+    <pathelement location="${AbsoluteLayout.jar}"/>
+    <pathelement location="${swing-layout.jar}"/>
+
+<!-- Include all elements that Tomcat exposes to applications
+    <pathelement location="${catalina.home}/common/classes"/>
+    <fileset dir="${catalina.home}/common/endorsed">
+      <include name="*.jar"/>
+    </fileset>
+    <fileset dir="${catalina.home}/common/lib">
+      <include name="*.jar"/>
+    </fileset>
+    <pathelement location="${catalina.home}/shared/classes"/>
+    <fileset dir="${catalina.home}/shared/lib">
+      <include name="*.jar"/>
+    </fileset>
+-->
+
+</path>
+
+
+<!--
+===============================================================================
+                        Usage Target
+===============================================================================
+Show usage for the build file.
+-->
+
+<target name="usage" description="Show usage">
+    <echo message="Issue ant -projecthelp for available tasks"/>
+</target>
+
+
+<!--
+===============================================================================
+                        Clean Target
+===============================================================================
+
+The "clean" target deletes any previous "build" and "dist" directory, so that
+you can be ensured the application can be built from scratch.
+-->
+
+<target name="clean"
+        description="Delete old build directory">
+    <delete dir="${build.home}"/>
+    <delete dir="${dist.home}"/>
+    <delete file="${app.name}.zip"/>
+</target>
+
+<!--
+===============================================================================
+                        Debug Target
+===============================================================================
+
+Lists the properties for debugging purposes.
+-->
+
+<target name="debug"
+        description="List debugging information">
+
+    <echo message="Lists the properties for debugging purposes."/>
+    <echo message="Application:"/>
+    <echo message="  Name                      ${app.name}"/>
+    <echo message="  Major Version             ${app.version}"/>
+    <echo message="  Source directory          ${src.home}"/>
+    <echo message="  Build directory           ${build.home}"/>
+    <echo message="  Distribution directory    ${dist.home}"/>
+    <echo message="  Application name          ${dist.jar.name}"/>
+    <echo message=""/>
+    <echo message="Environment:"/>
+    <echo message="  Base Directory            ${basedir}"/>
+    <echo message="  Ant Home                  ${ant.home}"/>
+    <echo message="  Java Home                 ${java.home}"/>
+    <echo message="  Java Version              ${ant.java.version}"/>
+    <echo message="  User Home                 ${user.home}"/>
+    <echo message=""/>
+    <echo message="Build options:"/>
+    <echo message="  Generate debugging info   ${compile.debug}"/>
+    <echo message="  Display deprecation info  ${compile.deprecation}"/>
+    <echo message="  Optimize                  ${compile.optimize}"/>
+</target>
+
+<!--
+===============================================================================
+                        Compile Target
+===============================================================================
+
+The "compile" target transforms source files (from your "src" directory) into
+object files in the appropriate location in the build directory.
+-->
+
+<target name="compile" depends="prepare"
+        description="Compile Java sources">
+
+    <!-- Compile Java classes -->
+    <javac srcdir="${src.home}"
+          destdir="${build.home}"
+            debug="${compile.debug}"
+      deprecation="${compile.deprecation}"
+         optimize="${compile.optimize}">
+        <classpath refid="compile.classpath"/>
+    </javac>
+
+</target>
+
+<!--
+===============================================================================
+                        Dist Target
+===============================================================================
+
+The "dist" target creates a binary distribution of your application in a
+directory structure ready to be archived in a tar.gz or zip file.  Note that
+this target depends on two others:
+
+  * "compile" so that the entire web application (including external
+    dependencies) will have been assembled
+
+  * "javadoc" so that the application Javadocs will have been created
+-->
+
+<target name="dist" depends="javadoc"
+        description="Create binary distribution with documentation">
+
+    <mkdir dir="${dist.home}"/>
+    <delete file="${dist.home}/${dist.jar.name}"/>
+    <delete file="${dist.home}/${dist.zip.name}"/>
+
+    <tstamp/>
+    <buildnumber/>
+
+    <property name="now" value="${DSTAMP}-${TSTAMP}" />
+    <property name="app.complete.name"
+              value="${app.name}-v${app.version}.${build.number}.${now}" />
+
+    <!-- Create application JAR file -->
+    <jar destfile="${dist.home}/${app.complete.name}.jar"
+         basedir="${build.home}">
+        <manifest>
+            <attribute name="Built-By" value="${user.name}"/>
+            <attribute name="Class-Path" value="ojdbc14.jar jconn2.jar mysql-3.0.7.jar RDBMSConnectionPool.jar looks-1.2.1.jar oalnf.jar liquidlnf.jar swing-layout-1.0.jar AbsoluteLayout.jar"/>
+            <attribute name="Main-Class"
+                value="org.jax.mgi.mtb.jSql.jSql"/>
+        </manifest>
+    </jar>
+
+    <!-- copy the JAR file to get rid of the version -->
+    <copy file="${dist.home}/${app.complete.name}.jar"
+          tofile="${dist.home}/${dist.jar.name}"
+          overwrite="true"/>
+
+    <!-- Copy documentation subdirectories -->
+    <copy todir="${dist.home}/docs">
+        <fileset dir="${docs.home}">
+            <exclude name="src/**"/>
+            <exclude name="stylesheet.css"/>
+        </fileset>
+    </copy>
+
+
+    <!-- Create application ZIP file with documentation -->
+    <!--zip destfile="${dist.home}/${app.complete.name}.zip"
+         basedir="${dist.home}"/-->
+
+    <!-- Copy additional files to ${dist.home} as necessary -->
+
+
+    <!-- copy the ZIP file to get rid of the version -->
+    <!--copy file="${dist.home}/${app.complete.name}.zip"
+          tofile="${dist.home}/${dist.zip.name}"
+          overwrite="true"/-->
+
+</target>
+
+
+<!--
+===============================================================================
+                        Deploy Target
+===============================================================================
+
+The "zip-src" target creates a source distribution of the entire application.
+-->
+<target name="deploy" depends="dist" description="Create distribution and copy">
+    <copy file="${dist.home}/${dist.jar.name}"
+          todir="/home/mjv/work/mtb/mtbei/lib"
+          overwrite="true"/>
+</target>
+
+
+<!--
+===============================================================================
+                        Zip-src Target
+===============================================================================
+
+The "zip-src" target creates a source distribution of the entire application.
+-->
+
+<target name="zip-src"
+        description="Zip the entire source tree">
+
+    <delete file="${app.name}.zip"/>
+
+    <!-- Put everything in into the zip file -->
+    <zip destfile="${app.name}.zip">
+        <zipfileset dir="${basedir}" prefix="${app.name}"/>
+    </zip>
+</target>
+
+
+<!--
+===============================================================================
+                        Javadoc Target
+===============================================================================
+
+The "javadoc" target creates Javadoc API documentation for the Java classes
+included in your application.  Normally, this is only required when preparing
+a distribution release, but is available as a separate target in case the
+developer wants to create Javadocs independently.
+-->
+
+<target name="javadoc" depends="compile"
+        description="Create Javadoc API documentation">
+
+    <!-- Recreate the directory -->
+    <delete dir="${dist.home}/docs"/>
+    <mkdir dir="${dist.home}/docs/api"/>
+
+    <javadoc sourcepath="${src.home}"
+             destdir="${dist.home}/docs/api"
+             author="true"
+             doctitle="&lt;h1&gt;${app.name}&lt;/h1&gt;"
+             packagenames="*"
+             use="true"
+             verbose="no"
+             version="true"
+             windowtitle="${app.name}">
+        <classpath refid="compile.classpath"/>
+        <bottom>
+            Copyright © 2004 The Jackson Laboratory. All Rights Reserved.
+        </bottom>
+    </javadoc>
+
+    <!-- Overwrite the stylesheet -->
+    <copy file="${docs.home}/stylesheet.css"
+          tofile="${dist.home}/docs/api/stylesheet.css"
+          overwrite="true"/>
+
+</target>
+
+
+<!--
+===============================================================================
+                        Javasrc Target
+===============================================================================
+
+The "javasrc" target creates Java Source HTML files.
+-->
+
+<target name="javasrc" depends="compile"
+        description="Creates Java Source HTML files.">
+    <!-- Remake the directory in order to start fresh -->
+    <delete dir="${docs.home}/src"/>
+    <delete dir="${build.home}/docs/src"/>
+    <mkdir dir="${build.home}/docs/src"/>
+
+    <java jar="${jSql.jar}"
+          fork="true"
+          failonerror="true"
+          maxmemory="128m">
+        <arg line="-i ${src.home} -o ${build.home}/docs/src"/>
+    </java>
+
+    <copy todir="${docs.home}/src">
+        <fileset dir="${build.home}/docs/src"/>
+    </copy>
+
+</target>
+
+
+<!--
+===============================================================================
+                        Prepare Target
+===============================================================================
+
+The "prepare" target is used to create the "build" destination directory,
+and copy the static contents of your web application to it.  If you need
+to copy static files from external dependencies, you can customize the
+contents of this task.
+
+Normally, this task is executed indirectly when needed.
+-->
+
+<target name="prepare" depends="clean">
+
+    <!-- Create build directories as needed -->
+    <mkdir dir="${build.home}"/>
+    <!--
+    <mkdir  dir="${build.home}/WEB-INF"/>
+    <mkdir  dir="${build.home}/WEB-INF/classes"/>
+    -->
+
+    <!-- Copy static content of this application -->
+    <copy todir="${build.home}/org/jax/mgi/mtb/jSql/resources">
+      <fileset dir="${src.home}/org/jax/mgi/mtb/jSql/resources"/>
+    </copy>
+
+    <!-- Copy external dependencies as required -->
+    <!-- *** CUSTOMIZE HERE AS REQUIRED BY YOUR APPLICATION *** -->
+
+    <!-- Copy static files from external dependencies as needed -->
+    <!-- *** CUSTOMIZE HERE AS REQUIRED BY YOUR APPLICATION *** -->
+
+</target>
+
+<!--
+===============================================================================
+                        Target Test
+===============================================================================
+
+Test the jSql application.
+-->
+
+<target name="test"
+        description="Test the jSql application.">
+
+    <copy file="${dist.home}/${dist.jar.name}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <copy file="${oracle.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <copy file="${mysql.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <copy file="${sybase.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <copy file="${JSortTable.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <copy file="${RDBMSConnectionPool.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <copy file="${looks.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <copy file="${liquidlnf.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <copy file="${oalnf.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+          
+    <copy file="${swing-layout.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <java jar="${tests.home}/${dist.jar.name}"
+          fork="true"
+          dir="${tests.home}"
+          failonerror="true"
+          maxmemory="128m"/>
+
+</target>
+
+<!--
+===============================================================================
+                        Dist Install
+===============================================================================
+
+The "dist-install" target creates a binary distribution of your application in a
+directory structure ready to be archived in a tar.gz or zip file.  Note that
+this target depends on two others:
+
+  * "compile" so that the entire web application (including external
+    dependencies) will have been assembled
+
+  * "javadoc" so that the application Javadocs will have been created
+-->
+
+<target name="dist-install"
+        description="Create self install distribution">
+
+    <delete dir="${build.home}/install"/>
+    <mkdir dir="${build.home}/install"/>
+
+    <!-- Copy the needed libraries -->
+    <copy file="${dist.home}/${dist.jar.name}"
+          todir="${build.home}/install"
+          overwrite="true"/>
+
+    <copy file="${oracle.jar}"
+          todir="${build.home}/install"
+          overwrite="true"/>
+
+    <copy file="${mysql.jar}"
+          todir="${build.home}/install"
+          overwrite="true"/>
+
+    <copy file="${sybase.jar}"
+          todir="${build.home}/install"
+          overwrite="true"/>
+
+    <copy file="${JSortTable.jar}"
+          todir="${build.home}/install"
+          overwrite="true"/>
+
+    <copy file="${RDBMSConnectionPool.jar}"
+          todir="${build.home}/install"
+          overwrite="true"/>
+
+    <copy file="${looks.jar}"
+          todir="${build.home}/install"
+          overwrite="true"/>
+
+    <copy file="${liquidlnf.jar}"
+          todir="${build.home}/install"
+          overwrite="true"/>
+          
+    <copy file="${swing-layout.jar}"
+          todir="${tests.home}"
+          overwrite="true"/>
+
+    <copy file="${oalnf.jar}"
+          todir="${build.home}/install"
+          overwrite="true"/>
+
+    <zip destfile="${build.home}/${install.zip.name}"
+         basedir="${build.home}/install"/>
+
+    <copy file="${build.home}/${install.zip.name}"
+          tofile="${build.home}/${install.jar.name}"/>
+
+    <jar destfile="${build.home}/${install.jar.name}"
+         update="true">
+        <manifest>
+            <attribute name="Built-By" value="${user.name}"/>
+            <attribute name="Main-Class" value="SelfExtractZip"/>
+        </manifest>
+        <fileset dir="${lib.home}"
+                 includes="**/SelfExtractZip.class"/>
+    </jar>
+
+    <copy file="${build.home}/${install.jar.name}"
+          todir="${dist.home}"
+          overwrite="true"/>
+
+</target>
+
+
+</project>

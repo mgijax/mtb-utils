@@ -1,0 +1,1223 @@
+Fri Dec 01 13:13:12 EST 2006  [debug] AvalonLogSystem initialized using logfile 'velocity.log'
+Fri Dec 01 13:13:12 EST 2006   [info] ************************************************************** 
+Fri Dec 01 13:13:12 EST 2006   [info] Starting Jakarta Velocity v1.3.1
+Fri Dec 01 13:13:12 EST 2006   [info] RuntimeInstance initializing.
+Fri Dec 01 13:13:12 EST 2006   [info] Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+Fri Dec 01 13:13:12 EST 2006   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Fri Dec 01 13:13:12 EST 2006   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Fri Dec 01 13:13:12 EST 2006   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Fri Dec 01 13:13:12 EST 2006   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:12 EST 2006   [info] FileResourceLoader : initialization starting.
+Fri Dec 01 13:13:12 EST 2006   [info] FileResourceLoader : adding path 'conf'
+Fri Dec 01 13:13:12 EST 2006   [info] FileResourceLoader : initialization complete.
+Fri Dec 01 13:13:12 EST 2006   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Fri Dec 01 13:13:12 EST 2006   [info] Default ResourceManager initialization complete.
+Fri Dec 01 13:13:12 EST 2006   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Fri Dec 01 13:13:12 EST 2006   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Fri Dec 01 13:13:12 EST 2006   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Fri Dec 01 13:13:12 EST 2006   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Fri Dec 01 13:13:12 EST 2006   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Fri Dec 01 13:13:12 EST 2006   [info] Created: 20 parsers.
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : initialization starting.
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Fri Dec 01 13:13:12 EST 2006  [error] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro :  VM library template macro registration complete.
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : messages on  : VM system will output logging messages
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : initialization complete.
+Fri Dec 01 13:13:12 EST 2006   [info] Velocity successfully started.
+Fri Dec 01 13:13:12 EST 2006   [info] ResourceManager : found ManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:12 EST 2006   [info] ResourceManager : found ManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:12 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:12 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:12 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:12 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:12 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:12 EST 2006   [info] Velocimacro : added new VM : #sqlAppend( somestr ) : source = xManagerTemplate.vm
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:13 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:14 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:14 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:15 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:16 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:17 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:17 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:18 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:19 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:19 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xBeanTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [warn] Velocimacro : VM addition rejected : sqlAppend : inline not allowed to replace existing VM
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xManagerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xComparatorTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found xListenerTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found HeaderTemplate.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Fri Dec 01 13:13:20 EST 2006   [info] ResourceManager : found PerTableVariables.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
