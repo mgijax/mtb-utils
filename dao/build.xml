@@ -68,18 +68,7 @@
     -->
     
 <target name="-post-jar" description="Create distribution and copy">
-    <copy file="dist/dao.jar"
-          todir="../mtbdao/lib"
-          overwrite="true"/>
-    <copy file="dist/dao.jar"
-          todir="../jaxpathdao/lib"
-          overwrite="true"/>
-    <copy file="dist/dao.jar"
-          todir="../mtbei/lib"
-          overwrite="true"/>
-    <copy file="dist/dao.jar"
-          todir="../mtbwi/lib"
-          overwrite="true"/>
+   
 </target>
     
 </project>

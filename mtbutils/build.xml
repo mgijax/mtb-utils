@@ -67,24 +67,7 @@
 
     -->
 <target name="-post-jar">
-    <copy file="${dist.jar}"
-          todir="../mtbdao/lib"
-          overwrite="true"/>
-    <copy file="${dist.jar}"
-          todir="../mtbei/lib"
-          overwrite="true"/>
-    <copy file="${dist.jar}"
-          todir="../mtbwi/lib"
-          overwrite="true"/>
-    <copy file="${dist.jar}"
-          todir="../mtbws/lib"
-          overwrite="true"/>
-    <copy file="${dist.jar}"
-          todir="../mtbpathdao/lib"
-          overwrite="true"/>
-    <copy file="${dist.jar}"
-          todir="../mtbpathwi/lib"
-          overwrite="true"/>
+ 
 </target>    
 
 </project>

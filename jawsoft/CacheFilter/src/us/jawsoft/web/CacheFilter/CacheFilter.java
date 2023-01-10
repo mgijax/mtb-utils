@@ -17,7 +17,6 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.PageContext;
-import org.apache.log4j.Logger;
 
 /**
  * CacheFilter is a Java Servlet filter that caches server output.
@@ -40,8 +39,8 @@ public class CacheFilter implements Filter {
     /**
      * The logger for this class.
      */
-    private final static Logger log = 
-            Logger.getLogger(CacheFilter.class.getName());
+    private final static org.apache.logging.log4j.Logger log =
+            org.apache.logging.log4j.LogManager.getLogger(CacheFilter.class.getName());
 
     /**
      * The servlet context.

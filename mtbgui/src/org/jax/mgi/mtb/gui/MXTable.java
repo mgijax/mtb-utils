@@ -504,7 +504,7 @@ public class MXTable extends JTable
 
         try {
             o = getValueAt(row,col);
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (Exception e) {
         }
 
         if (o == null) {

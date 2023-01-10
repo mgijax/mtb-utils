@@ -18,7 +18,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.PageContext;
-import org.apache.log4j.Logger;
 
 /**
  * A CacheManager creates, flushes and manages the cache.
@@ -151,7 +150,8 @@ public class CacheManager
     /**
      * The logger for this class.
      */
-    private static Logger log = Logger.getLogger(CacheManager.class.getName());
+    private final static org.apache.logging.log4j.Logger log =
+            org.apache.logging.log4j.LogManager.getLogger(CacheManager.class.getName());
 
     /**
      * Whether or not to use the hos name in the key.

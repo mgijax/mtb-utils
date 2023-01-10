@@ -7,7 +7,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import org.apache.log4j.Logger;
+
 
 
 /**
@@ -24,7 +24,8 @@ public class CacheItemDisk extends CacheItem implements Serializable {
     /**
      * The logger for this class.
      */
-    private static Logger log = Logger.getLogger(CacheItemDisk.class.getName());
+    private final static org.apache.logging.log4j.Logger log =
+            org.apache.logging.log4j.LogManager.getLogger(CacheItemDisk.class.getName());
 
     /**
      * Default file name length.

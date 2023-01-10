@@ -13,7 +13,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import org.apache.log4j.Logger;
 
 /**
  * Simple filter to display how long a request took to process.
@@ -32,7 +31,8 @@ public class TimerFilter implements Filter {
     // ----------------------------------------------------- Instance Variables
 
     private FilterConfig filterConfig = null;
-    private static Logger log = Logger.getLogger(TimerFilter.class.getName());
+    private final static org.apache.logging.log4j.Logger log =
+            org.apache.logging.log4j.LogManager.getLogger(TimerFilter.class.getName());
 
     // ----------------------------------------------------------- Constructors
     // none

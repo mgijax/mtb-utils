@@ -67,8 +67,6 @@
 
     -->
 <target name="-post-jar">
-    <copy file="${dist.jar}"
-          todir="../mtbei/lib"
-          overwrite="true"/>
+   
 </target>    
 </project>

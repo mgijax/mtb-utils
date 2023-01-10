@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
 import javax.sql.DataSource;
-import org.apache.log4j.Logger;
 
 /**
  * The DAOManager provides connections and manages transactions transparently.
@@ -32,7 +31,8 @@ public abstract class DAOManager {
 
     // -------------------------------------------------------------- Constants
 
-    final  static Logger logger = Logger.getLogger(DAOManager.class.getName());
+    private final static org.apache.logging.log4j.Logger log =
+            org.apache.logging.log4j.LogManager.getLogger(DAOManager.class.getName());
 
     // ----------------------------------------------------- Instance Variables
 
@@ -137,7 +137,7 @@ public abstract class DAOManager {
                 s.close();
             }
         } catch (SQLException x) {
-            logger.warn("Could not close statement!: " + x.toString());
+            log.warn("Could not close statement!: " + x.toString());
         }
     }
  
@@ -150,7 +150,7 @@ public abstract class DAOManager {
                 rs.close();
             }
         } catch (SQLException x) {
-            logger.warn("Could not close result set!: " + x.toString());
+            log.warn("Could not close result set!: " + x.toString());
         }
     }
 
